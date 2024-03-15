@@ -14,6 +14,7 @@ Route::post('/register', [CustomRegisterController::class, 'register']);
 Route::get('/login', [CustomLoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [CustomLoginController::class, 'login']);
 
+// home page
 Route::get('/home', function () {
     return view('home');
 })->name('home')->middleware('auth');
